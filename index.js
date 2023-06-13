@@ -15,7 +15,7 @@ const setUpAndStartServer = () => {
     const app = express();
     app.use(morgan('combined'));
     app.use(limiter);
-    const x = app.get('/home', (req,res) => {
+    app.get('/home', (req,res) => {
         return res.status(200).json({
             message : 'OK'
         })
